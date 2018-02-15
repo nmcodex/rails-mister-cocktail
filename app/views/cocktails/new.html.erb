@@ -1,0 +1,19 @@
+<h1>Cocktails#new</h1>
+
+<%= simple_form_for(@cocktail) do |f| %>
+  <% if @cocktail.errors.any? %>
+    <div class="errors-container">
+      <ul>
+        <% @cocktail.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.input :name, class: "form-control" %>
+
+  <%= f.submit "Add cocktail", class: "btn btn-primary" %>
+ <% end %>
+
+<%= link_to "Back to cocktail list", cocktails_path %>
