@@ -1,23 +1,27 @@
 <%= render 'shared/banner' %>
 
-<div class="col-xs-12 col-sm-10 col-sm-offset-1">
-  <div class="card-container">
-    <% @cocktails.each do |c| %>
-    <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path c.photo, height: 300, width: 400, crop: :fill %>');">
-      <div class="card-category"><%=c.name%></div>
-      <div class="card-description">
-        <p>Review</p>
-      </div>
-      <%= link_to "See recipe", cocktail_path(c), class: "card-link" %>
-    </div>
-    <% end %>
+<div class="card-container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <div class="card-container">
+        <% @cocktails.each do |c| %>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path c.photo, height: 300, width: 400, crop: :fill %>');">
+          <div class="card-category"><%=c.name%></div>
+          <div class="card-description">
+            <p>Review</p>
+          </div>
+          <%= link_to "See recipe", cocktail_path(c), class: "card-link" %>
+        </div>
+        <% end %>
 
-    <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://cdn.pixabay.com/photo/2017/11/10/05/24/add-2935429_960_720.png');">
-      <div class="card-category">Add a cocktail</div>
-      <div class="card-description">
-        <p>your turn !!</p>
+        <div class="card" style="background-image: linear-gradient(rgba(62,110,135,0.9), rgba(62,110,135,0.9)), url('https://cdn.pixabay.com/photo/2017/11/10/05/24/add-2935429_960_720.png');">
+          <div class="card-category">Add a cocktail</div>
+          <div class="card-description">
+            <p>your turn !!</p>
+          </div>
+          <%= link_to "Create new cocktail", new_cocktail_path, class: "card-link" %>
+        </div>
       </div>
-      <%= link_to "Create new cocktail", new_cocktail_path, class: "card-link" %>
     </div>
   </div>
 </div>
