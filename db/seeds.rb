@@ -20,5 +20,5 @@ ingredients_attributes.each { |h| h[:name] = h.delete "strIngredient1"}
 Ingredient.create!(ingredients_attributes)
 puts 'Finished!'
 
-Cocktail.create(name: "Mojito")
-Cocktail.create(name: "Bloody Mary")
+Cocktail.create(name: "Mojito", photo: "../app/images/mojito.jpg")
+Cocktail.create(name: "Bloody Mary", photo: "../app/images/bloody_mary.jpg")
