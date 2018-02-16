@@ -1,8 +1,14 @@
 // Specific CSS for your home-page
 
-.card-container {
+.container {
   display: flex;
   justify-content: center;
   margin: 0;
   padding: 0;
+  width: 100%;
+}
+
+.row {
+  height: 200px;
+  width: 100%;
 }
