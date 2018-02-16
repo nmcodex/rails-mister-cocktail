@@ -41,6 +41,7 @@ gem 'simple_form'
 gem 'jquery-rails' # Add this line if you use Rails 5.1
 ruby '2.4.3'
 gem 'figaro'
+gem 'cloudinary'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
